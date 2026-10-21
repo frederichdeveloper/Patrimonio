@@ -1,0 +1,122 @@
+:root {
+  --bg-main: #090d16;
+  --bg-card: rgba(17, 24, 39, 0.75);
+  --border-card: rgba(255, 255, 255, 0.08);
+  --accent: #38bdf8;
+  --accent-gradient: linear-gradient(135deg, #38bdf8 0%, #1d4ed8 100%);
+  --text-main: #f3f4f6;
+  --text-muted: #9ca3af;
+  --income-color: #34d399;
+  --expense-color: #f87171;
+}
+
+body {
+  background-color: var(--bg-main);
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(56, 189, 248, 0.12) 0px, transparent 50%),
+    radial-gradient(at 100% 100%, rgba(29, 78, 216, 0.12) 0px, transparent 50%);
+  background-attachment: fixed;
+  color: var(--text-main);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.navbar {
+  background: rgba(9, 13, 22, 0.85);
+  backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-card);
+}
+
+.card-premium {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-card);
+  border-radius: 1.25rem;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5), 0 8px 10px -6px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.balance-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.balance-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.text-income { color: var(--income-color); }
+.text-expense { color: var(--expense-color); }
+
+.btn-premium {
+  background: var(--accent-gradient);
+  border: none;
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  transition: opacity 0.2s ease, transform 0.1s ease;
+}
+
+.btn-premium:hover {
+  opacity: 0.95;
+  color: #fff;
+}
+
+.btn-google {
+  background-color: #ffffff;
+  color: #1f2937;
+  font-weight: 600;
+  border: none;
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: background-color 0.2s ease;
+}
+
+.btn-google:hover {
+  background-color: #f3f4f6;
+  color: #111827;
+}
+
+.form-control, .form-select {
+  background-color: rgba(15, 23, 42, 0.8);
+  border: 1px solid var(--border-card);
+  color: #ffffff;
+  border-radius: 0.75rem;
+  padding: 0.65rem 1rem;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: rgba(15, 23, 42, 0.95);
+  color: #ffffff;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 0.25rem rgba(56, 189, 248, 0.15);
+}
+
+.table-custom {
+  --bs-table-bg: transparent;
+  --bs-table-color: var(--text-main);
+  border-color: var(--border-card);
+}
+
+.badge-account {
+  background: rgba(56, 189, 248, 0.1);
+  color: var(--accent);
+  border: 1px solid rgba(56, 189, 248, 0.2);
+}
+
+.badge-category {
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text-muted);
+  border: 1px solid var(--border-card);
+}
